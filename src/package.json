@@ -91,6 +91,10 @@
   },
   "keywords": [],
   "author": "Hyoan",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT" ,
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
 }
