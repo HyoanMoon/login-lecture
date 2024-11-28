@@ -14,8 +14,8 @@ function login() {
   //   console.log(req);
   //   console.log("value", id.value);
 
-  console.log(req);
-  console.log(JSON.stringify(req));
+  // console.log(req);
+  // console.log(JSON.stringify(req));
 
   fetch("/login", {
     method: "POST",
@@ -23,5 +23,7 @@ function login() {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(req),
-  });
+  })
+    .then((res) => res.json())
+    .then(console.log);
 }
