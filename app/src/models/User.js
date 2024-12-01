@@ -20,6 +20,12 @@ class User {
     }
     return { success: false, msg: "Id does not exist" };
   }
+
+  register() {
+    const body = this.body;
+    const response = UserStorage.save(body);
+    return response;
+  }
 }
 
 module.exports = User;
