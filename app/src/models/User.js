@@ -7,10 +7,10 @@ class User {
     this.body = body;
   }
 
-  login() {
+  async login() {
     const body = this.body;
-    const { id, pw } = UserStorage.getUserInfo(body.id);
-    console.log("id", id, " pw", pw);
+
+    const { id, pw } = await UserStorage.getUserInfo(body.id);
 
     if (id) {
       if (id === body.id && pw === body.pw) {
