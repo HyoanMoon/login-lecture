@@ -21,10 +21,14 @@ class User {
     return { success: false, msg: "Id does not exist" };
   }
 
-  register() {
+  async register() {
     const body = this.body;
-    const response = UserStorage.save(body);
-    return response;
+    try {
+      const response = await UserStorage.save(body);
+      return response;
+    } catch (err) {
+      return { success: false, msg: err };
+    }
   }
 }
 
