@@ -20,7 +20,7 @@ class User {
       }
       return { success: false, msg: "Username does not exist" };
     } catch (err) {
-      return { success: false, msg: err };
+      return { success: false, err };
     }
   }
 
@@ -30,7 +30,7 @@ class User {
       const response = await UserStorage.save(body);
       return response;
     } catch (err) {
-      return { success: false, msg: err };
+      return { success: false, err };
     }
   }
 }
